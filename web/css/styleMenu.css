@@ -1,0 +1,54 @@
+body{
+    background-color: #DCDCDC;
+}
+h2{
+    font-family: Arial Narrow, sans-serif;
+    font-size: 60px;
+    font-weight: 700;
+    margin-bottom: 50px;
+    color: #fff;
+    letter-spacing: 0.06em;
+    text-shadow: 4px 3px 3px #000;
+    text-transform: uppercase;
+}
+/* ------------------- BOTÕES ------------------- */
+.btn-adm{
+    letter-spacing: 0.07em;
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 500px;
+    padding: 20px 45px;
+    margin: 10px 15px;
+    text-transform: uppercase;
+    transition: background 0.4s, color 0.4s;
+}
+.btn-preto{
+    background: #fff;
+    color: #000;
+    margin: 10px 30px;
+}
+.btn-preto:hover{
+    background-color: #DEB887;
+    color: #000;
+}
+.botoesPretos{
+    margin-top: 126px;
+    text-align: center;
+}
+#imagem{
+    margin-top: 10px;
+}
+.btnEspaco{
+    margin-bottom: 5px;
+}
+.centro{
+    text-align: center;
+}
+#rodape{
+    background-color: #000;
+    margin-bottom: 0px;
+    padding-bottom: 25px;
+}
+.vertical{
+    padding-top: 25px;
+}

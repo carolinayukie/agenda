@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 24/06/2019 16:42:10 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class catalog="agenda" name="com.agenda.model.MeioContato" optimistic-lock="version" table="meiocontato">
+    <id name="idMeioContato" type="java.lang.Integer">
+      <column name="idMeioContato"/>
+      <generator class="identity"/>
+    </id>
+    <many-to-one class="com.agenda.model.Contato" fetch="select" name="contato">
+      <column name="idContato" not-null="true"/>
+    </many-to-one>
+    <property name="tipoContato" type="string">
+      <column length="15" name="tipoContato" not-null="true"/>
+    </property>
+    <property name="conteudo" type="string">
+      <column length="250" name="conteudo" not-null="true"/>
+    </property>
+  </class>
+</hibernate-mapping>

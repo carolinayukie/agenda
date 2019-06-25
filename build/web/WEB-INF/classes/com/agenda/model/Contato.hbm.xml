@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 24/06/2019 16:42:10 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class catalog="agenda" name="com.agenda.model.Contato" optimistic-lock="version" table="contato">
+    <id name="idContato" type="java.lang.Integer">
+      <column name="idContato"/>
+      <generator class="identity"/>
+    </id>
+    <many-to-one class="com.agenda.model.Usuario" fetch="select" name="usuario">
+      <column name="idUsuario"/>
+    </many-to-one>
+    <property name="nome" type="string">
+      <column length="50" name="nome" not-null="true"/>
+    </property>
+    <property name="cargo" type="string">
+      <column length="30" name="cargo"/>
+    </property>
+    <property name="empresa" type="string">
+      <column length="30" name="empresa"/>
+    </property>
+    <property name="dataAniversario" type="date">
+      <column length="10" name="dataAniversario"/>
+    </property>
+    <set fetch="select" inverse="true" lazy="true" name="meiocontatos" table="meiocontato">
+      <key>
+        <column name="idContato" not-null="true"/>
+      </key>
+      <one-to-many class="com.agenda.model.MeioContato"/>
+    </set>
+    <set fetch="select" inverse="true" lazy="true" name="enderecos" table="endereco">
+      <key>
+        <column name="idContato"/>
+      </key>
+      <one-to-many class="com.agenda.model.Endereco"/>
+    </set>
+  </class>
+</hibernate-mapping>

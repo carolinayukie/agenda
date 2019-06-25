@@ -1,0 +1,47 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 19/05/2019, 22:55:20
+    Author     : cyms8
+*/
+
+h3{
+    font-family: Verdana, Geneva, sans-serif;
+    text-align: center;
+}
+
+.tabela{
+    margin-top: 30px;
+}
+
+.btnOp{
+    margin: 5px 0px;
+}
+
+.botoesPretos{
+    text-align: center;
+}
+
+.btn-adm{
+    letter-spacing: 0.07em;
+    font-size: 15px;
+    font-weight: 700;
+    border-radius: 500px;
+    padding: 10px 35px;
+    margin: 10px 15px;
+    text-transform: uppercase;
+    transition: background 0.4s, color 0.4s;
+}
+
+.btn-pa{
+    background: #000;
+    color: #fff;
+    margin: 10px 30px;
+}
+.btn-pa:hover{
+    background-color: #FA8072;
+    color: #000;
+}

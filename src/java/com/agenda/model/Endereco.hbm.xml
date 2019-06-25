@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 24/06/2019 16:42:10 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class catalog="agenda" name="com.agenda.model.Endereco" optimistic-lock="version" table="endereco">
+    <id name="idEndereco" type="java.lang.Integer">
+      <column name="idEndereco"/>
+      <generator class="identity"/>
+    </id>
+    <many-to-one class="com.agenda.model.Contato" fetch="select" name="contato">
+      <column name="idContato"/>
+    </many-to-one>
+    <property name="endereco" type="string">
+      <column length="250" name="endereco" not-null="true"/>
+    </property>
+    <property name="numero" type="string">
+      <column length="10" name="numero"/>
+    </property>
+    <property name="complemento" type="string">
+      <column length="50" name="complemento"/>
+    </property>
+    <property name="bairro" type="string">
+      <column length="100" name="bairro" not-null="true"/>
+    </property>
+    <property name="cidade" type="string">
+      <column length="100" name="cidade" not-null="true"/>
+    </property>
+    <property name="uf" type="string">
+      <column length="2" name="uf" not-null="true"/>
+    </property>
+    <property name="tipoEndereco" type="string">
+      <column length="10" name="tipoEndereco"/>
+    </property>
+  </class>
+</hibernate-mapping>
